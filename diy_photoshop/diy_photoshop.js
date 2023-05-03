@@ -1,14 +1,15 @@
 var img;
-var initials ='jm'; // your initials
+var initials ='DN'; // your initials
 var choice = '1'; // starting choice, so it is not empty
 var screenbg = 250; // off white background
 var lastscreenshot=61; // last screenshot never taken
-
+var img2;
 function preload() {
 // preload() runs once, it may make you wait
 //  img = loadImage('cat.jpg');  // cat.jpg needs to be next to this .js file
 // you can link to an image on your github account
   img = loadImage('https://dave-artwork.github.io/images/tree2.jpg');
+  img2 = loadImage('https://dave-artwork.github.io/images/water1.jpg');
 }
 
 function setup() {
@@ -79,7 +80,12 @@ function newkeyChoice(toolChoice) { //toolchoice is the key that was pressed
   } else if (toolChoice == 'g' || toolChoice == 'G') { // g places the image we pre-loaded
     image(img, mouseX, mouseY, 50, 50);
     
+  } else if (toolChoice == 'w' || toolChoice == 'W') { // w places the image we pre-loaded
+    image(img2, mouseX, mouseY, 50, 50);
+    
   }
+  
+  
  }
  
 function testbox(r, g, b) {
